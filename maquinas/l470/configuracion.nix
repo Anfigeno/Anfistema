@@ -7,16 +7,16 @@
   anfistema = {
     kitty.activar = true;
     git.activar = true;
+    niri.activar = true;
   };
 
   programs = {
     neovim.enable = true;
     fish.enable = true;
-    niri.enable = true;
     firefox.enable = true;
   };
 
-  anfistema.paquetes = with pkgs; [
+  environment.systemPackages = with pkgs; [
     brightnessctl
     fuzzel
     zed-editor

@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/26.05";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
+    niri-flake.url = "github:sodiboo/niri-flake";
   };
 
   outputs =
@@ -11,6 +12,7 @@
       self,
       nixpkgs,
       home-manager,
+      niri-flake,
       ...
     }@inputs:
     let
@@ -48,6 +50,7 @@
             modules = [
               { nixpkgs.pkgs = pkgs; }
               home-manager.nixosModules.home-manager
+              { home-manager.sharedModules = [ niri-flake.homeModules.niri ]; }
               ./modulos
               ./maquinas/configuracionPorDefecto.nix
             ];
