@@ -90,16 +90,22 @@
             "Mod+P".action.spawn = "${pkgs.fuzzel}/bin/fuzzel";
 
             "XF86AudioRaiseVolume".action.spawn = [
-              "${pkgs.wireplumber}/wpctl"
+              "${pkgs.wireplumber}/bin/wpctl"
               "set-volume"
               "@DEFAULT_AUDIO_SINK@"
               "0.05+"
             ];
             "XF86AudioLowerVolume".action.spawn = [
-              "${pkgs.wireplumber}/wpctl"
+              "${pkgs.wireplumber}/bin/wpctl"
               "set-volume"
               "@DEFAULT_AUDIO_SINK@"
               "0.05-"
+            ];
+            "XF86AudioMute".action.spawn = [
+              "${pkgs.wireplumber}/bin/wpctl"
+              "set-mute"
+              "@DEFAULT_AUDIO_SOURCE@"
+              "toggle"
             ];
             "XF86AudioPlay".action.spawn = [
               "${pkgs.playerctl}/bin/playerctl"
