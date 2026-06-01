@@ -9,6 +9,7 @@
     git.activar = true;
     niri.activar = true;
     fish.activar = true;
+    firefox.activar = true;
 
     paquetesHm = with pkgs; [
       brightnessctl

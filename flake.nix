@@ -5,6 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/26.05";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     niri-flake.url = "github:sodiboo/niri-flake";
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -20,7 +24,10 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ niri-flake.overlays.niri ];
+        overlays = [
+          niri-flake.overlays.niri
+          inputs.firefox-addons.overlays.default
+        ];
       };
       lib = pkgs.lib;
 

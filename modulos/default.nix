@@ -6,5 +6,6 @@
     ./git
     ./niri
     ./fish
+    ./firefox
   ];
 }
