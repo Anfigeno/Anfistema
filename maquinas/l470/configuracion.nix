@@ -9,17 +9,15 @@
     git.activar = true;
     niri.activar = true;
     fish.activar = true;
+
+    paquetesHm = with pkgs; [
+      brightnessctl
+      zed-editor
+    ];
   };
 
   programs = {
     neovim.enable = true;
-    fish.enable = true;
     firefox.enable = true;
   };
-
-  environment.systemPackages = with pkgs; [
-    brightnessctl
-    fuzzel
-    zed-editor
-  ];
 }

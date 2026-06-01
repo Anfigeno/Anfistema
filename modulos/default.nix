@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./anfistema
     ./kitty
     ./git
     ./niri
