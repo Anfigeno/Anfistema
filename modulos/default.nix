@@ -4,5 +4,6 @@
     ./kitty
     ./git
     ./niri
+    ./fish
   ];
 }

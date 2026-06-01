@@ -8,6 +8,7 @@
     kitty.activar = true;
     git.activar = true;
     niri.activar = true;
+    fish.activar = true;
   };
 
   programs = {

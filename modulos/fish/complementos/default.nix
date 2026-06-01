@@ -1,0 +1,4 @@
+[
+  ./tide.nix
+  ./fzf.nix
+]
