@@ -13,6 +13,7 @@
     paquetesHm = with pkgs; [
       brightnessctl
       zed-editor
+      legcord
     ];
   };
 

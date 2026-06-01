@@ -11,10 +11,17 @@
   };
 
   config = lib.mkIf config.anfistema.niri.activar {
+    programs.niri.enable = true;
+
     home-manager.users.${usuario} = {
       programs.niri = {
+        package = pkgs.niri-unstable;
         enable = true;
         settings = {
+          xwayland-satellite = {
+            enable = true;
+            path = lib.getExe pkgs.xwayland-satellite-unstable;
+          };
           input = {
             keyboard.xkb = { };
             touchpad = {
@@ -23,14 +30,14 @@
             };
             mouse = { };
           };
-          outputs."eDP-1" = {
-            mode = {
-              height = 1366;
-              width = 768;
-              refresh = 60.059;
-            };
-            scale = 1;
-          };
+          # outputs."eDP-1" = {
+          #   mode = {
+          #     height = 1366;
+          #     width = 768;
+          #     refresh = 60.059;
+          #   };
+          #   scale = 1;
+          # };
           layout = {
             gaps = 8;
             center-focused-column = "never";
