@@ -7,6 +7,8 @@
   ...
 }:
 {
+  imports = [ ./integraciones ];
+
   options.anfistema.firefox.activar = lib.mkEnableOption {
     description = "Activa el módulo de Firefox";
   };
