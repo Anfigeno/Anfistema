@@ -8,5 +8,6 @@
     ./firefox
     ./gtkYQt
     ./awww
+    ./xdg
   ];
 }

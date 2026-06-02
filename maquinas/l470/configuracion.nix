@@ -9,6 +9,7 @@
     kitty.activar = true;
     niri.activar = true;
     awww.activar = true;
+    xdg.activar = true;
     firefox.activar = true;
     gtkYQt.activar = true;
 
