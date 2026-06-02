@@ -9,6 +9,7 @@
     ./git
     ./direnv
     ./ssh
+    ./btop
   ];
 
   options.anfistema.entornoDeDesarrollo.activar = lib.mkEnableOption {
@@ -21,6 +22,7 @@
       git.activar = true;
       direnv.activar = true;
       ssh.activar = true;
+      btop.activar = true;
     };
   };
 }
