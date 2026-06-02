@@ -9,5 +9,6 @@
     ./gtkYQt
     ./awww
     ./xdg
+    ./sddm
   ];
 }

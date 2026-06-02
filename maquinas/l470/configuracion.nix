@@ -12,6 +12,7 @@
     xdg.activar = true;
     firefox.activar = true;
     gtkYQt.activar = true;
+    sddm.activar = true;
 
     paquetesHm = with pkgs; [
       nautilus
@@ -20,6 +21,7 @@
       legcord
       prismlauncher
       amberol
+      discord
     ];
   };
 
