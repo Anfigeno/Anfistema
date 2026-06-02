@@ -102,11 +102,7 @@
             "Mod+Shift+P".action.power-off-monitors = { };
 
             "Mod+Return".action.spawn = "${pkgs.kitty}/bin/kitty";
-            "Mod+Space".action.spawn = [
-              "${pkgs.wofi}/bin/wofi"
-              "--show"
-              "drun"
-            ];
+            "Mod+Space".action.spawn = "${pkgs.fuzzel}/bin/fuzzel";
 
             "XF86AudioRaiseVolume".action.spawn = [
               "${pkgs.wireplumber}/bin/wpctl"

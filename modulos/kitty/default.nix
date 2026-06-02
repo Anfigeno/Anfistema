@@ -14,6 +14,7 @@
     home-manager.users.${usuario} = {
       programs.kitty = {
         enable = true;
+        themeFile = "gruvbox-dark-hard";
         settings = {
           font_family = "Iosevka Nerd Font";
           bold_font = "Iosevka Bold";
