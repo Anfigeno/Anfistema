@@ -8,6 +8,7 @@
     ./fish
     ./git
     ./direnv
+    ./ssh
   ];
 
   options.anfistema.entornoDeDesarrollo.activar = lib.mkEnableOption {
@@ -19,6 +20,7 @@
       fish.activar = true;
       git.activar = true;
       direnv.activar = true;
+      ssh.activar = true;
     };
   };
 }

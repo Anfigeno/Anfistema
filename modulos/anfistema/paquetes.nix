@@ -11,6 +11,6 @@
   };
 
   config = {
-    environment.systemPackages = config.anfistema.paquetesHm;
+    environment.systemPackages = config.anfistema.paquetes;
   };
 }
