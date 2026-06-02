@@ -54,7 +54,7 @@
               { proportion = 1. / 2.; }
               { proportion = 2. / 3.; }
             ];
-            default-column-width.proportion = 2. / 3.;
+            default-column-width.proportion = 0.5;
             focus-ring = {
               width = 2;
               active = {
@@ -68,7 +68,7 @@
               repeat = false;
               action.toggle-overview = { };
             };
-            "Mod+Q" = {
+            "Mod+Shift+C" = {
               repeat = false;
               action.close-window = { };
             };
@@ -76,12 +76,12 @@
             "Mod+L".action.focus-column-right = { };
             "Mod+Shift+H".action.move-column-left = { };
             "Mod+Shift+L".action.move-column-right = { };
-            "Mod+D".action.focus-workspace-down = { };
-            "Mod+U".action.focus-workspace-up = { };
-            "Mod+Shift+D".action.move-column-to-workspace-down = { };
-            "Mod+Shift+U".action.move-column-to-workspace-up = { };
-            "Mod+Ctrl+D".action.move-workspace-down = { };
-            "Mod+Ctrl+U".action.move-workspace-up = { };
+            "Mod+J".action.focus-workspace-down = { };
+            "Mod+K".action.focus-workspace-up = { };
+            "Mod+Shift+J".action.move-column-to-workspace-down = { };
+            "Mod+Shift+K".action.move-column-to-workspace-up = { };
+            "Mod+Ctrl+J".action.move-workspace-down = { };
+            "Mod+Ctrl+K".action.move-workspace-up = { };
             "Mod+Comma".action.consume-window-into-column = { };
             "Mod+Period".action.expel-window-from-column = { };
             "Mod+R".action.switch-preset-column-width = { };
@@ -102,7 +102,11 @@
             "Mod+Shift+P".action.power-off-monitors = { };
 
             "Mod+Return".action.spawn = "${pkgs.kitty}/bin/kitty";
-            "Mod+P".action.spawn = "${pkgs.fuzzel}/bin/fuzzel";
+            "Mod+Space".action.spawn = [
+              "${pkgs.wofi}/bin/wofi"
+              "--show"
+              "drun"
+            ];
 
             "XF86AudioRaiseVolume".action.spawn = [
               "${pkgs.wireplumber}/bin/wpctl"
