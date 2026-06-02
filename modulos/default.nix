@@ -10,5 +10,6 @@
     ./awww
     ./xdg
     ./sddm
+    ./fontconfig
   ];
 }
