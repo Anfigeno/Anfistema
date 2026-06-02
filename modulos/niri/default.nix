@@ -73,11 +73,15 @@
               action.close-window = { };
             };
             "Mod+H".action.focus-column-left = { };
+            "Mod+Shift+WheelScrollUp".action.focus-column-left = { };
             "Mod+L".action.focus-column-right = { };
+            "Mod+Shift+WheelScrollDown".action.focus-column-right = { };
             "Mod+Shift+H".action.move-column-left = { };
             "Mod+Shift+L".action.move-column-right = { };
             "Mod+J".action.focus-workspace-down = { };
+            "Mod+WheelScrollDown".action.focus-workspace-down = { };
             "Mod+K".action.focus-workspace-up = { };
+            "Mod+WheelScrollUp".action.focus-workspace-up = { };
             "Mod+Shift+J".action.move-column-to-workspace-down = { };
             "Mod+Shift+K".action.move-column-to-workspace-up = { };
             "Mod+Ctrl+J".action.move-workspace-down = { };
