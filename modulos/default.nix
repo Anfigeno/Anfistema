@@ -7,5 +7,6 @@
     ./niri
     ./firefox
     ./gtkYQt
+    ./awww
   ];
 }

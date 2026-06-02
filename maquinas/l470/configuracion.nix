@@ -8,6 +8,7 @@
     entornoDeDesarrollo.activar = true;
     kitty.activar = true;
     niri.activar = true;
+    awww.activar = true;
     firefox.activar = true;
     gtkYQt.activar = true;
 
