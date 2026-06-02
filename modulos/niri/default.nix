@@ -18,6 +18,14 @@
         package = pkgs.niri-unstable;
         enable = true;
         settings = {
+          cursor =
+            let
+              configuracionHm = config.home-manager.users.${usuario}.home.pointerCursor;
+            in
+            {
+              theme = configuracionHm.name;
+              size = configuracionHm.size;
+            };
           xwayland-satellite = {
             enable = true;
             path = lib.getExe pkgs.xwayland-satellite-unstable;

@@ -10,16 +10,19 @@
     niri.activar = true;
     fish.activar = true;
     firefox.activar = true;
+    gtkYQt.activar = true;
 
     paquetesHm = with pkgs; [
+      nautilus
       brightnessctl
       zed-editor
       legcord
+      prismlauncher
+      amberol
     ];
   };
 
   programs = {
     neovim.enable = true;
-    firefox.enable = true;
   };
 }

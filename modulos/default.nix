@@ -7,5 +7,6 @@
     ./niri
     ./fish
     ./firefox
+    ./gtkYQt
   ];
 }
