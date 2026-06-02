@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 {
@@ -17,12 +18,20 @@
   };
 
   config = lib.mkIf config.anfistema.entornoDeDesarrollo.activar {
-    anfistema.entornoDeDesarrollo = {
-      fish.activar = true;
-      git.activar = true;
-      direnv.activar = true;
-      ssh.activar = true;
-      btop.activar = true;
+    anfistema = {
+      entornoDeDesarrollo = {
+        fish.activar = true;
+        git.activar = true;
+        direnv.activar = true;
+        ssh.activar = true;
+        btop.activar = true;
+      };
+
+      paquetesHm = with pkgs; [
+        zip
+        unzip
+        curl
+      ];
     };
   };
 }
