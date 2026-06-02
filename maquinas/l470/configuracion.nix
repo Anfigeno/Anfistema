@@ -5,10 +5,9 @@
   boot.loader.grub.useOSProber = true;
 
   anfistema = {
+    entornoDeDesarrollo.activar = true;
     kitty.activar = true;
-    git.activar = true;
     niri.activar = true;
-    fish.activar = true;
     firefox.activar = true;
     gtkYQt.activar = true;
 

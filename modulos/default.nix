@@ -1,11 +1,10 @@
 { ... }:
 {
   imports = [
+    ./entornoDeDesarrollo
     ./anfistema
     ./kitty
-    ./git
     ./niri
-    ./fish
     ./firefox
     ./gtkYQt
   ];
