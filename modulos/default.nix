@@ -11,5 +11,6 @@
     ./xdg
     ./sddm
     ./fontconfig
+    ./pipewire
   ];
 }
