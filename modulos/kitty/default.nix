@@ -29,7 +29,7 @@
             cell_height 10px
           '';
 
-          window_padding_width = 0;
+          window_padding_width = 8;
           confirm_os_window_close = 0;
           hide_window_decorations = true;
 
