@@ -86,6 +86,10 @@
             "Mod+Shift+K".action.move-column-to-workspace-up = { };
             "Mod+Ctrl+J".action.move-workspace-down = { };
             "Mod+Ctrl+K".action.move-workspace-up = { };
+            "Mod+D".action.focus-window-down = { };
+            "Mod+U".action.focus-window-up = { };
+            "Mod+Shift+D".action.move-window-down = { };
+            "Mod+Shift+U".action.move-window-up = { };
             "Mod+Comma".action.consume-window-into-column = { };
             "Mod+Period".action.expel-window-from-column = { };
             "Mod+R".action.switch-preset-column-width = { };
