@@ -8,6 +8,12 @@
 {
   config = lib.mkIf config.anfistema.entornoDeDesarrollo.neovix.activar {
     home-manager.users.${usuario}.programs.neovix.lenguajes = {
+      "python" = {
+        gramaticas = [ pkgs.vimPlugins.nvim-treesitter-parsers.python ];
+        formateadores = [ "black" ];
+        lsps = [ "basedpyright" ];
+        entornoDeEjecucion = "python";
+      };
       "git".gramaticas = with pkgs.vimPlugins.nvim-treesitter-parsers; [
         gitattributes
         git_rebase

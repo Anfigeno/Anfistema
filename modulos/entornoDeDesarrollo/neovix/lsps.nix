@@ -12,6 +12,7 @@
         "nixd".paquete = pkgs.nixd;
         "nil_ls".paquete = pkgs.nil;
         "biome".paquete = pkgs.biome;
+        "basedpyright".paquete = pkgs.basedpyright;
 
         "ts_ls" = {
           paquete = pkgs.typescript-language-server;

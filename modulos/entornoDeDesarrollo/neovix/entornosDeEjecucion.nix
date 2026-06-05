@@ -12,6 +12,10 @@
         paquete = pkgs.bun;
         configuracionDeCodeRunner = "bun";
       };
+      "python" = {
+        paquete = pkgs.python3;
+        configuracionDeCodeRunner = "python -m";
+      };
     };
   };
 }
