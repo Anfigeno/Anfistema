@@ -12,5 +12,6 @@
     ./sddm
     ./fontconfig
     ./pipewire
+    ./droidcam
   ];
 }

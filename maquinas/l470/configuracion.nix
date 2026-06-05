@@ -14,6 +14,7 @@
     gtkYQt.activar = true;
     sddm.activar = true;
     pipewire.activar = true;
+    droidcam.activar = true;
 
     paquetesHm = with pkgs; [
       nautilus
@@ -23,6 +24,7 @@
       prismlauncher
       amberol
       vesktop
+      file-roller
     ];
   };
 
