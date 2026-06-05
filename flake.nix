@@ -13,6 +13,10 @@
       url = "github:Anfigeno/Neovix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    mestizo256nix = {
+      url = "github:TemaMestizo/Mestizo256Nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -22,6 +26,7 @@
       home-manager,
       niri-flake,
       neovix,
+      mestizo256nix,
       ...
     }@inputs:
     let
@@ -45,6 +50,12 @@
         "defecto"
         "productividad"
       ];
+
+      modulosHM = [
+        niri-flake.homeModules.niri
+        neovix.moduloHM
+        mestizo256nix.moduloHM
+      ];
     in
     {
       nixosConfigurations =
@@ -64,10 +75,7 @@
               { nixpkgs.pkgs = pkgs; }
               home-manager.nixosModules.home-manager
               {
-                home-manager.sharedModules = [
-                  niri-flake.homeModules.niri
-                  neovix.moduloHM
-                ];
+                home-manager.sharedModules = modulosHM;
               }
               ./modulos
               ./maquinas/configuracionPorDefecto.nix

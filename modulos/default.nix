@@ -13,5 +13,6 @@
     ./fontconfig
     ./pipewire
     ./droidcam
+    ./mestizo256nix
   ];
 }

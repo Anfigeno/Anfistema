@@ -15,6 +15,7 @@
     sddm.activar = true;
     pipewire.activar = true;
     droidcam.activar = true;
+    mestizo256nix.activar = true;
 
     paquetesHm = with pkgs; [
       nautilus

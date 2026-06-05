@@ -41,6 +41,26 @@
         "type": "github"
       }
     },
+    "mestizo256nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780642999,
+        "narHash": "sha256-8rrMXl4HK1znFKkEJmiyrk7YJ1C486cQyGhI8r76YhM=",
+        "owner": "TemaMestizo",
+        "repo": "Mestizo256Nix",
+        "rev": "241785851781432e63c5b8fcdc77f5eebe570350",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TemaMestizo",
+        "repo": "Mestizo256Nix",
+        "type": "github"
+      }
+    },
     "neovix": {
       "inputs": {
         "nixpkgs": [
@@ -185,6 +205,7 @@
       "inputs": {
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
+        "mestizo256nix": "mestizo256nix",
         "neovix": "neovix",
         "niri-flake": "niri-flake",
         "nixpkgs": "nixpkgs_3"
