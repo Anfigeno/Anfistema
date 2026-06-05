@@ -1,0 +1,51 @@
+{
+  pkgs,
+  usuario,
+  config,
+  lib,
+  ...
+}:
+{
+  config = lib.mkIf config.anfistema.entornoDeDesarrollo.neovix.activar {
+    home-manager.users.${usuario}.programs.neovix.lenguajes = {
+      "git".gramaticas = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+        gitattributes
+        git_rebase
+        git_config
+        gitignore
+        gitcommit
+      ];
+      "typescript" = {
+        gramaticas = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+          typescript
+          tsx
+        ];
+        formateadores = [ "biome" ];
+        lsps = [
+          "ts_ls"
+          "biome"
+        ];
+        entornoDeEjecucion = "bun";
+      };
+      "javascript" = {
+        gramaticas = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+          javascript
+          jsdoc
+        ];
+        formateadores = [ "biome" ];
+        lsps = [
+          "ts_ls"
+          "biome"
+        ];
+      };
+      "nix" = {
+        gramaticas = [ pkgs.vimPlugins.nvim-treesitter-parsers.nix ];
+        formateadores = [ "nixfmt" ];
+        lsps = [
+          "nixd"
+          "nil_ls"
+        ];
+      };
+    };
+  };
+}

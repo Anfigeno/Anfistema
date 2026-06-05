@@ -9,6 +9,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neovix = {
+      url = "github:Anfigeno/Neovix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -17,6 +21,7 @@
       nixpkgs,
       home-manager,
       niri-flake,
+      neovix,
       ...
     }@inputs:
     let
@@ -58,7 +63,12 @@
             modules = [
               { nixpkgs.pkgs = pkgs; }
               home-manager.nixosModules.home-manager
-              { home-manager.sharedModules = [ niri-flake.homeModules.niri ]; }
+              {
+                home-manager.sharedModules = [
+                  niri-flake.homeModules.niri
+                  neovix.moduloHM
+                ];
+              }
               ./modulos
               ./maquinas/configuracionPorDefecto.nix
             ];

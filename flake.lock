@@ -41,6 +41,26 @@
         "type": "github"
       }
     },
+    "neovix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780620901,
+        "narHash": "sha256-fiw6Ye60a9vBpzY3GO5sCkUyspSy9oh13r4zqeY1Z0I=",
+        "owner": "Anfigeno",
+        "repo": "Neovix",
+        "rev": "298729b532d83c16549f2dc8b8e91817d92e68be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Anfigeno",
+        "repo": "Neovix",
+        "type": "github"
+      }
+    },
     "niri-flake": {
       "inputs": {
         "niri-stable": "niri-stable",
@@ -165,6 +185,7 @@
       "inputs": {
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
+        "neovix": "neovix",
         "niri-flake": "niri-flake",
         "nixpkgs": "nixpkgs_3"
       }

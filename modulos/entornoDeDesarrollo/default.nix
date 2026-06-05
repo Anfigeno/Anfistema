@@ -11,6 +11,7 @@
     ./direnv
     ./ssh
     ./btop
+    ./neovix
   ];
 
   options.anfistema.entornoDeDesarrollo.activar = lib.mkEnableOption {
@@ -25,6 +26,7 @@
         direnv.activar = true;
         ssh.activar = true;
         btop.activar = true;
+        neovix.activar = true;
       };
 
       paquetesHm = with pkgs; [
