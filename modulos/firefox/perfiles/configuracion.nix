@@ -41,6 +41,8 @@
 
   "general.smoothScroll" = true;
 
+  "ui.systemUsesDarkTheme" = 1;
+
   # Pa que funcionen los temas
   "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
 }
