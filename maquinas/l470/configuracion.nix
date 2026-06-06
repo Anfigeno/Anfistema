@@ -18,6 +18,7 @@
     mestizo256nix.activar = true;
     vesktop.activar = true;
     obs.activar = true;
+    steam.activar = true;
 
     paquetesHm = with pkgs; [
       nautilus

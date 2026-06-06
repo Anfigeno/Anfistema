@@ -16,5 +16,6 @@
     ./mestizo256nix
     ./vesktop
     ./obs
+    ./steam
   ];
 }
