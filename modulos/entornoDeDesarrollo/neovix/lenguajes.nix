@@ -8,6 +8,14 @@
 {
   config = lib.mkIf config.anfistema.entornoDeDesarrollo.neovix.activar {
     home-manager.users.${usuario}.programs.neovix.lenguajes = {
+      "json" = {
+        gramaticas = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+          json
+          json5
+        ];
+        formateadores = [ "biome" ];
+        lsps = [ "jsonls" ];
+      };
       "python" = {
         gramaticas = [ pkgs.vimPlugins.nvim-treesitter-parsers.python ];
         formateadores = [ "black" ];

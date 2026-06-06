@@ -9,6 +9,7 @@
   config = lib.mkIf config.anfistema.entornoDeDesarrollo.neovix.activar {
     home-manager.users.${usuario}.programs.neovix.lspconfig = {
       configuraciones = {
+        "jsonls".paquete = pkgs.vscode-json-languageserver;
         "nixd".paquete = pkgs.nixd;
         "nil_ls".paquete = pkgs.nil;
         "biome".paquete = pkgs.biome;
