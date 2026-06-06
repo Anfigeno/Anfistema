@@ -1,0 +1,52 @@
+{ ... }:
+{
+  imports = [
+    ./obsidian
+    ./lsp-file-operations
+    ./supermaven
+    ./hlchunk
+    ./reactive
+    ./mini-statusline
+    ./blink
+    ./neotree
+    ./lazydev
+    ./smooth-resize
+    ./tiny-inline-diagnostics
+    ./todo-comments
+    ./trouble
+    ./ts-autotag
+    ./ufo
+    ./wich-key
+    ./statuscol
+    ./stay-centered
+    ./tabout
+    ./telescope
+    ./tiny-code-action
+    ./navic
+    ./no-neck-pain
+    ./rainbow-delimiters
+    ./rest
+    ./satellite
+    ./keep-split-ratio
+    ./markview
+    ./inc-rename
+    ./image
+    ./hover
+    ./gitsigns
+    ./direnv
+    ./colorizer
+    ./modes
+    ./lualine
+    ./mini-surround
+    ./mini-move
+    ./mini-icons
+    ./fyler
+    ./autopairs
+    ./bufferline
+    ./cmp
+    ./mestizo256
+    ./dashboard
+    ./noice
+    ./fidget
+  ];
+}

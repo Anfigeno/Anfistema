@@ -11,6 +11,7 @@
     ./formateadores.nix
     ./lenguajes.nix
     ./lsps.nix
+    ./complementos
   ];
 
   options.anfistema.entornoDeDesarrollo.neovix.activar =

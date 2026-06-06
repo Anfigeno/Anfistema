@@ -56,6 +56,8 @@
         neovix.moduloHM
         mestizo256nix.moduloHM
       ];
+
+      util = import ./util.nix { inherit pkgs lib; };
     in
     {
       nixosConfigurations =
@@ -69,6 +71,7 @@
                 usuario
                 maquina
                 perfiles
+                util
                 ;
             };
             modules = [
