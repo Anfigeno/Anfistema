@@ -14,5 +14,7 @@
     ./pipewire
     ./droidcam
     ./mestizo256nix
+    ./vesktop
+    ./obs
   ];
 }

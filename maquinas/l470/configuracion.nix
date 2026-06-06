@@ -16,6 +16,8 @@
     pipewire.activar = true;
     droidcam.activar = true;
     mestizo256nix.activar = true;
+    vesktop.activar = true;
+    obs.activar = true;
 
     paquetesHm = with pkgs; [
       nautilus
@@ -24,8 +26,8 @@
       legcord
       prismlauncher
       amberol
-      vesktop
       file-roller
+      vlc
     ];
   };
 
