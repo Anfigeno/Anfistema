@@ -19,6 +19,7 @@
     vesktop.activar = true;
     obs.activar = true;
     steam.activar = true;
+    kdeconnect.activar = true;
 
     paquetesHm = with pkgs; [
       nautilus

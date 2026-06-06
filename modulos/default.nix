@@ -17,5 +17,6 @@
     ./vesktop
     ./obs
     ./steam
+    ./kdeconnect
   ];
 }
