@@ -12,6 +12,7 @@
     ./ssh
     ./btop
     ./neovix
+    ./yazi
   ];
 
   options.anfistema.entornoDeDesarrollo.activar = lib.mkEnableOption {
@@ -27,6 +28,7 @@
         ssh.activar = true;
         btop.activar = true;
         neovix.activar = true;
+        yazi.activar = true;
       };
 
       paquetesHm = with pkgs; [
