@@ -13,7 +13,16 @@
       "mimetypes"
       "xml2lua"
     ];
-    configuracion = /* lua */ ''require("telescope").load_extension("rest")'';
+    configuracion = /* lua */ ''
+      require("telescope").load_extension("rest")
+
+      vim.api.nvim_create_autocmd("FileType",  {
+        pattern = { "json" },
+        callback = function()
+          vim.api.nvim_set_option_value("formatprg", "${pkgs.jq}/bin/jq", { scope = 'local' })
+        end,
+      })
+    '';
     lazy = {
       tiposDeArchivo = [ "http" ];
       teclas = {

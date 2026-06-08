@@ -8,6 +8,7 @@
 {
   config = lib.mkIf config.anfistema.entornoDeDesarrollo.neovix.activar {
     home-manager.users.${usuario}.programs.neovix.lenguajes = {
+      "http".gramaticas = [ pkgs.vimPlugins.nvim-treesitter-parsers.http ];
       "json" = {
         gramaticas = with pkgs.vimPlugins.nvim-treesitter-parsers; [
           json
