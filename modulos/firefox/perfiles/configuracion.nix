@@ -45,4 +45,6 @@
 
   # Pa que funcionen los temas
   "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+
+  "intl.locale.requested" = "";
 }
