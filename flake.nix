@@ -49,6 +49,7 @@
       perfiles = [
         "defecto"
         "productividad"
+        "procrastinacion"
       ];
 
       modulosHM = [

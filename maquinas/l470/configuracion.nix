@@ -30,6 +30,9 @@
       amberol
       file-roller
       vlc
+      ffmpeg
+      kdePackages.kdenlive
+      yt-dlp
     ];
   };
 
