@@ -20,9 +20,9 @@
     obs.activar = true;
     steam.activar = true;
     kdeconnect.activar = true;
+    nautilus.activar = true;
 
     paquetesHm = with pkgs; [
-      nautilus
       brightnessctl
       zed-editor
       legcord

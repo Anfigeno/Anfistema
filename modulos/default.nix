@@ -18,5 +18,6 @@
     ./obs
     ./steam
     ./kdeconnect
+    ./nautilus
   ];
 }
