@@ -49,13 +49,21 @@
           '';
           descripcion = "Bufferline: Anterior buffer";
         };
-        "<c-t>" = {
+        "<space>tt" = {
           comando = "<cmd>tabnew<cr>";
-          descripcion = "Nueva pestaña";
+          descripcion = "Nueva ventana";
         };
-        "<m-tab>" = {
+        "<space>tc" = {
+          comando = "<cmd>tabclose<cr>";
+          descripcion = "Cerrar ventana";
+        };
+        "<space>tn" = {
           comando = "<cmd>tabnext<cr>";
-          descripcion = "Siguiente pestaña";
+          descripcion = "Siguiente ventana";
+        };
+        "<space>tp" = {
+          comando = "<cmd>tabprevious<cr>";
+          descripcion = "Anterior ventana";
         };
         "<space>bc" = {
           comando = "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>";
@@ -90,8 +98,8 @@
           descripcion = "Bufferline: Elegir buffer";
         };
         "<space>br" = {
-          comando = /* vim */ '':BufferLineTabRename '';
-          descripcion = "Bufferline: Renombrar pestaña";
+          comando = /* vim */ ":BufferLineTabRename ";
+          descripcion = "Bufferline: Renombrar buffer";
         };
       };
     };

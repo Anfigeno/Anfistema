@@ -16,6 +16,10 @@
         paquete = pkgs.python3;
         configuracionDeCodeRunner = "python -m";
       };
+      "lua" = {
+        paquete = pkgs.lua;
+        configuracionDeCodeRunner = "lua";
+      };
     };
   };
 }

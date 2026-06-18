@@ -4,5 +4,6 @@
     "biome".paquete = pkgs.biome;
     "nixfmt".paquete = pkgs.nixfmt;
     "black".paquete = pkgs.black;
+    "stylua".paquete = pkgs.stylua;
   };
 }

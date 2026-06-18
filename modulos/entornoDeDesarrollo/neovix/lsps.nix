@@ -9,6 +9,7 @@
   config = lib.mkIf config.anfistema.entornoDeDesarrollo.neovix.activar {
     home-manager.users.${usuario}.programs.neovix.lspconfig = {
       configuraciones = {
+        "lua_ls".paquete = pkgs.lua-language-server;
         "jsonls".paquete = pkgs.vscode-json-languageserver;
         "nixd".paquete = pkgs.nixd;
         "nil_ls".paquete = pkgs.nil;
