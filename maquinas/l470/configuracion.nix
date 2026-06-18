@@ -24,7 +24,6 @@
 
     paquetesHm = with pkgs; [
       brightnessctl
-      zed-editor
       legcord
       prismlauncher
       amberol
@@ -32,6 +31,8 @@
       vlc
       ffmpeg
       kdePackages.kdenlive
+      kdePackages.gwenview
+      totem
       yt-dlp
     ];
   };
