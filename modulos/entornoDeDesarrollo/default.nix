@@ -13,6 +13,7 @@
     ./btop
     ./neovix
     ./yazi
+    ./zellij
   ];
 
   options.anfistema.entornoDeDesarrollo.activar = lib.mkEnableOption {
@@ -29,6 +30,7 @@
         btop.activar = true;
         neovix.activar = true;
         yazi.activar = true;
+        zellij.activar = true;
       };
 
       paquetesHm = with pkgs; [
