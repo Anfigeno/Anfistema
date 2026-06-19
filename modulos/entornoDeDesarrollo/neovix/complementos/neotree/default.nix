@@ -13,6 +13,7 @@
       ];
       configuracion = /* lua */ ''
         require("neo-tree").setup {
+          clipboard = { sync = "universal" },
           popup_border_style = "",
           window = { width = 50 },
           event_handlers = {
