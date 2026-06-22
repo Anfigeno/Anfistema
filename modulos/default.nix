@@ -19,5 +19,6 @@
     ./steam
     ./kdeconnect
     ./nautilus
+    ./kdenlive
   ];
 }

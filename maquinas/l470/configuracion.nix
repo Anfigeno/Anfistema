@@ -21,6 +21,7 @@
     steam.activar = true;
     kdeconnect.activar = true;
     nautilus.activar = true;
+    kdenlive.activar = true;
 
     paquetesHm = with pkgs; [
       brightnessctl
@@ -30,7 +31,6 @@
       file-roller
       vlc
       ffmpeg
-      kdePackages.kdenlive
       kdePackages.gwenview
       totem
       yt-dlp
