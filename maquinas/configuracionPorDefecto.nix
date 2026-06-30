@@ -53,6 +53,8 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "audio"
+      "pipewire"
     ];
   };
 
