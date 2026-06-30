@@ -16,7 +16,7 @@
     pipewire.activar = true;
     droidcam.activar = true;
     mestizo256nix.activar = true;
-    vesktop.activar = true;
+    discord.activar = true;
     obs.activar = true;
     steam.activar = true;
     kdeconnect.activar = true;

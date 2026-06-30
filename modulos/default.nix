@@ -14,7 +14,7 @@
     ./pipewire
     ./droidcam
     ./mestizo256nix
-    ./vesktop
+    ./discord
     ./obs
     ./steam
     ./kdeconnect
