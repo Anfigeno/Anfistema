@@ -38,20 +38,25 @@
     ];
   };
 
-  networking.networkmanager = {
-    enable = true;
-    settings = {
-      connection-wifi = {
-        match-device = "type:wifi";
-        "ipv4.route-metric" = 100;
-        "ipv6.route-metric" = 100;
-      };
+  networking.networkmanager =
+    let
+      prioridadDeEthernet = 100;
+      prioridadDeWifi = 900;
+    in
+    {
+      enable = true;
+      settings = {
+        connection-wifi = {
+          match-device = "type:wifi";
+          "ipv4.route-metric" = prioridadDeWifi;
+          "ipv6.route-metric" = prioridadDeWifi;
+        };
 
-      connection-ethernet = {
-        match-device = "type:ethernet";
-        "ipv4.route-metric" = 400;
-        "ipv6.route-metric" = 400;
+        connection-ethernet = {
+          match-device = "type:ethernet";
+          "ipv4.route-metric" = prioridadDeEthernet;
+          "ipv6.route-metric" = prioridadDeEthernet;
+        };
       };
     };
-  };
 }
