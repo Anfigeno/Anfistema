@@ -7,12 +7,12 @@
   anfistema = {
     entornoDeDesarrollo.activar = true;
     kitty.activar = true;
-    niri.activar = true;
-    awww.activar = true;
+    # niri.activar = true;
+    # awww.activar = true;
     xdg.activar = true;
     firefox.activar = true;
     gtkYQt.activar = true;
-    sddm.activar = true;
+    # sddm.activar = true;
     pipewire.activar = true;
     droidcam.activar = true;
     mestizo256nix.activar = true;
@@ -20,19 +20,20 @@
     obs.activar = true;
     steam.activar = true;
     kdeconnect.activar = true;
-    nautilus.activar = true;
+    # nautilus.activar = true;
     kdenlive.activar = true;
+    gnome.activar = true;
 
     paquetesHm = with pkgs; [
       brightnessctl
-      legcord
+      # legcord
       prismlauncher
-      amberol
-      file-roller
-      vlc
+      # amberol
+      # file-roller
+      # vlc
       ffmpeg
       kdePackages.gwenview
-      totem
+      # totem
       yt-dlp
     ];
   };

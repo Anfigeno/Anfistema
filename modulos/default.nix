@@ -20,5 +20,6 @@
     ./kdeconnect
     ./nautilus
     ./kdenlive
+    ./gnome
   ];
 }
