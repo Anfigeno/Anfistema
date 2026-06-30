@@ -115,6 +115,8 @@
             "org/gnome/shell/app-switcher".current-workspace-only = true;
             "org/gnome/shell/window-switcher".current-workspace-only = true;
 
+            "org/gnome/settings-daemon/plugins/power".sleep-inactive-ac-type = "nothing";
+
             "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings =
               atajosDeAplicaciones
               |> lib.lists.imap0 (
