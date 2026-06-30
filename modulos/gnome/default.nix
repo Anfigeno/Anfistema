@@ -9,7 +9,10 @@
   options.anfistema.gnome.activar = lib.mkEnableOption "Activa el módulo de Entorno Gnome";
 
   config = lib.mkIf config.anfistema.gnome.activar {
-    services.displayManager.gdm.enable = true;
+    services.displayManager.gdm = {
+      enable = true;
+      autoSuspend = false;
+    };
     services.desktopManager.gnome.enable = true;
 
     services.gnome = {
