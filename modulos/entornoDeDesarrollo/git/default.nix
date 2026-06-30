@@ -17,6 +17,7 @@
           init.defaultBranch = "main";
           user.name = "anfigeno";
           user.email = "dolorcriticodevastador@proton.me";
+          puil.rebase = true;
         };
       };
 
