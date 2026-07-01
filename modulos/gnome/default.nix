@@ -115,7 +115,25 @@
             "org/gnome/shell/app-switcher".current-workspace-only = true;
             "org/gnome/shell/window-switcher".current-workspace-only = true;
 
-            "org/gnome/settings-daemon/plugins/power".sleep-inactive-ac-type = "nothing";
+            "org/gnome/desktop/screensaver" = {
+              lock-enabled = false;
+              lock-delay = lib.gvariant.mkUint32 0;
+            };
+
+            "org/gnome/desktop/session" = {
+              idle-delay = lib.gvariant.mkUint32 0;
+            };
+
+            "org/gnome/settings-daemon/plugins/power" = {
+              sleep-inactive-ac-type = "nothing";
+              sleep-inactive-battery-type = "nothing";
+              sleep-inactive-ac-timeout = 0;
+              sleep-inactive-battery-timeout = 0;
+              power-button-action = "nothing";
+            };
+
+            "org/gnome/desktop/interface" = {
+            };
 
             "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings =
               atajosDeAplicaciones
