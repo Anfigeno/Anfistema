@@ -1,6 +1,13 @@
 {
   description = "Sistema de Anfi";
 
+  nixConfig = {
+    extra-substituters = [ "https://playit-nixos-module.cachix.org" ];
+    extra-trusted-public-keys = [
+      "playit-nixos-module.cachix.org-1:22hBXWXBbd/7o1cOnh+p0hpFUVk9lPdRLX3p5YSfRz4="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/26.05";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
@@ -17,6 +24,10 @@
       url = "github:TemaMestizo/Mestizo256Nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    agenix.url = "github:ryantm/agenix";
+
+    playit-nixos-module.url = "github:pedorich-n/playit-nixos-module";
   };
 
   outputs =
@@ -27,6 +38,8 @@
       niri-flake,
       neovix,
       mestizo256nix,
+      playit-nixos-module,
+      agenix,
       ...
     }@inputs:
     let
@@ -68,6 +81,7 @@
           value = nixpkgs.lib.nixosSystem {
             specialArgs = {
               inherit
+                system
                 inputs
                 usuario
                 maquina
@@ -77,7 +91,9 @@
             };
             modules = [
               { nixpkgs.pkgs = pkgs; }
+              playit-nixos-module.nixosModules.default
               home-manager.nixosModules.home-manager
+              agenix.nixosModules.default
               {
                 home-manager.sharedModules = modulosHM;
               }

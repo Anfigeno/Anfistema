@@ -12,6 +12,8 @@
     pipewire.activar = true;
     mestizo256nix.activar = true;
     gnome.activar = true;
+    playit.activar = true;
+    agenix.activar = true;
   };
 
   networking = {

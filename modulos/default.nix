@@ -21,5 +21,7 @@
     ./nautilus
     ./kdenlive
     ./gnome
+    ./playit
+    ./agenix
   ];
 }
