@@ -15,10 +15,19 @@
         enable = true;
         settings = {
           init.defaultBranch = "main";
-          user.name = "anfigeno";
-          user.email = "dolorcriticodevastador@proton.me";
+          user.name = "Anfitrion";
+          user.email = "tendondevastador@proton.me";
           puil.rebase = true;
         };
+        includes = [
+          {
+            condition = "gitdir:~/Codigo/";
+            contents.user = {
+              name = "Anfigeno";
+              email = "dolorcriticodevastador@proton.me";
+            };
+          }
+        ];
       };
 
       programs.gh.enable = true;
