@@ -1,27 +1,38 @@
-{ pkgs, ... }:
+{ ... }:
 {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   anfistema = {
-    entornoDeDesarrollo.activar = true;
-    kitty.activar = true;
-    xdg.activar = true;
-    firefox.activar = true;
-    gtkYQt.activar = true;
-    pipewire.activar = true;
-    mestizo256nix.activar = true;
-    gnome.activar = true;
-    playit.activar = true;
-    agenix.activar = true;
-  };
+    gestoresDeEscritorio.gnome.activar = true;
+    gestoresDeVisualizacion.gdm.activar = true;
 
-  networking = {
-    nftables.enable = true;
-    firewall = {
-      enable = true;
-      allowedTCPPorts = [ 25565 ];
-      allowedUDPPorts = [ 19132 ];
+    aplicacionesGraficas = {
+      kitty.activar = true;
+      firefox.activar = true;
     };
+
+    aplicacionesDeTerminal = {
+      btop.activar = true;
+      direnv.activar = true;
+      fish.activar = true;
+      git.activar = true;
+      neovix.activar = true;
+      yazi.activar = true;
+      zellij.activar = true;
+    };
+
+    servicios = {
+      pipewire.activar = true;
+      ssh.activar = true;
+    };
+
+    personalizacionDeEscritorio = {
+      gtkYQt.activar = true;
+      fontconfig.activar = true;
+      xdg.activar = true;
+    };
+
+    nix.mestizo256nix.activar = true;
   };
 }
