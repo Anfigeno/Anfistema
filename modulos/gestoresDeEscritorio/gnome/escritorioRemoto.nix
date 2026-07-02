@@ -4,7 +4,7 @@
   ...
 }:
 {
-  config = lib.mkIf config.anfistema.gnome.activar {
+  config = lib.mkIf config.anfistema.gestoresDeEscritorio.gnome.activar {
     services.gnome.gnome-remote-desktop.enable = true;
     systemd.services.gnome-remote-desktop.wantedBy = [ "graphical.target" ];
     networking.firewall.allowedTCPPorts = [ 3389 ];

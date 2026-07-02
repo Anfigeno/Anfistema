@@ -6,7 +6,8 @@
   ...
 }:
 {
-  options.anfistema.gnome.activar = lib.mkEnableOption "Activa el módulo de Entorno Gnome";
+  options.anfistema.gestoresDeEscritorio.gnome.activar =
+    lib.mkEnableOption "Activa el módulo de Entorno Gnome";
 
   imports = [
     ./escritorios.nix
@@ -16,7 +17,7 @@
     ./extensiones.nix
   ];
 
-  config = lib.mkIf config.anfistema.gnome.activar {
+  config = lib.mkIf config.anfistema.gestoresDeEscritorio.gnome.activar {
     services.desktopManager.gnome.enable = true;
 
     services.gnome = {

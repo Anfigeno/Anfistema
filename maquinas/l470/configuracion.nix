@@ -22,7 +22,7 @@
     kdeconnect.activar = true;
     # nautilus.activar = true;
     kdenlive.activar = true;
-    gnome.activar = true;
+    gestoresDeEscritorio.gnome.activar = true;
     gestoresDeVisualizacion.gdm.activar = true;
 
     paquetesHm = with pkgs; [

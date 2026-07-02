@@ -5,7 +5,7 @@
   ...
 }:
 {
-  config = lib.mkIf config.anfistema.gnome.activar {
+  config = lib.mkIf config.anfistema.gestoresDeEscritorio.gnome.activar {
     home-manager.users.${usuario} = {
       dconf.settings = {
         "org/gnome/desktop/screensaver" = {

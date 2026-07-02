@@ -4,7 +4,6 @@
     ./entornoDeDesarrollo
     ./anfistema
     ./kitty
-    ./niri
     ./firefox
     ./gtkYQt
     ./awww
@@ -19,9 +18,9 @@
     ./kdeconnect
     ./nautilus
     ./kdenlive
-    ./gnome
     ./playit
     ./agenix
     ./gestoresDeVisualizacion
+    ./gestoresDeEscritorio
   ];
 }

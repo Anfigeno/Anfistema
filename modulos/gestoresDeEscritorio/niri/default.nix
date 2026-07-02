@@ -6,11 +6,9 @@
   ...
 }:
 {
-  options.anfistema.niri.activar = lib.mkEnableOption {
-    description = "Activa el módulo de niri";
-  };
+  options.anfistema.gestoresDeEscritorio.niri.activar = lib.mkEnableOption "Activa el módulo de niri";
 
-  config = lib.mkIf config.anfistema.niri.activar {
+  config = lib.mkIf config.anfistema.gestoresDeEscritorio.niri.activar {
     programs.niri.enable = true;
 
     home-manager.users.${usuario} = {
