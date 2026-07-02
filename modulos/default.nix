@@ -23,5 +23,6 @@
     ./gnome
     ./playit
     ./agenix
+    ./gdm
   ];
 }
