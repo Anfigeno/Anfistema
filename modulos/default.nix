@@ -9,7 +9,6 @@
     ./gtkYQt
     ./awww
     ./xdg
-    ./sddm
     ./fontconfig
     ./pipewire
     ./droidcam
@@ -23,6 +22,6 @@
     ./gnome
     ./playit
     ./agenix
-    ./gdm
+    ./gestoresDeVisualizacion
   ];
 }

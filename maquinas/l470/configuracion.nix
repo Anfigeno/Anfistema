@@ -23,7 +23,7 @@
     # nautilus.activar = true;
     kdenlive.activar = true;
     gnome.activar = true;
-    gdm.activar = true;
+    gestoresDeVisualizacion.gdm.activar = true;
 
     paquetesHm = with pkgs; [
       brightnessctl

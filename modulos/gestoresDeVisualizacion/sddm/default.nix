@@ -5,9 +5,8 @@
   ...
 }:
 {
-  options.anfistema.sddm.activar = lib.mkEnableOption {
-    description = "Activar entorno de desarrollo";
-  };
+  options.anfistema.gestoresDeVisualizacion.sddm.activar =
+    lib.mkEnableOption "Activa el módulo de SDDM";
 
   config =
     let
@@ -15,7 +14,7 @@
         embeddedTheme = "astronaut";
       };
     in
-    lib.mkIf config.anfistema.sddm.activar {
+    lib.mkIf config.anfistema.gestoresDeVisualizacion.sddm.activar {
       services.displayManager.sddm = {
         enable = true;
         wayland.enable = true;
