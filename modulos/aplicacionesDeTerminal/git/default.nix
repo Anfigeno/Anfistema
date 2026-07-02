@@ -5,11 +5,11 @@
   ...
 }:
 {
-  options.anfistema.entornoDeDesarrollo.git.activar = lib.mkEnableOption {
+  options.anfistema.aplicacionesDeTerminal.git.activar = lib.mkEnableOption {
     description = "Activa el módulo de Git";
   };
 
-  config = lib.mkIf config.anfistema.entornoDeDesarrollo.git.activar {
+  config = lib.mkIf config.anfistema.aplicacionesDeTerminal.git.activar {
     home-manager.users.${usuario} = {
       programs.git = {
         enable = true;

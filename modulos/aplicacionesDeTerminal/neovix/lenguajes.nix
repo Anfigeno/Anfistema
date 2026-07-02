@@ -6,7 +6,7 @@
   ...
 }:
 {
-  config = lib.mkIf config.anfistema.entornoDeDesarrollo.neovix.activar {
+  config = lib.mkIf config.anfistema.aplicacionesDeTerminal.neovix.activar {
     home-manager.users.${usuario}.programs.neovix.lenguajes = {
       "lua" = {
         gramaticas = with pkgs.vimPlugins.nvim-treesitter-parsers; [

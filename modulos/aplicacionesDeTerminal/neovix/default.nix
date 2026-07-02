@@ -14,10 +14,10 @@
     ./complementos
   ];
 
-  options.anfistema.entornoDeDesarrollo.neovix.activar =
+  options.anfistema.aplicacionesDeTerminal.neovix.activar =
     lib.mkEnableOption "Activa el módulo de neovix";
 
-  config = lib.mkIf config.anfistema.entornoDeDesarrollo.neovix.activar {
+  config = lib.mkIf config.anfistema.aplicacionesDeTerminal.neovix.activar {
     home-manager.users.${usuario}.programs.neovix = {
       activar = true;
       editorPorDefecto = true;

@@ -6,10 +6,10 @@
   ...
 }:
 {
-  options.anfistema.entornoDeDesarrollo.zellij.activar =
+  options.anfistema.aplicacionesDeTerminal.zellij.activar =
     lib.mkEnableOption "Activa el módulo de zellij";
 
-  config = lib.mkIf config.anfistema.entornoDeDesarrollo.zellij.activar {
+  config = lib.mkIf config.anfistema.aplicacionesDeTerminal.zellij.activar {
     home-manager.users.${usuario}.programs.zellij = {
       enable = true;
       settings = {

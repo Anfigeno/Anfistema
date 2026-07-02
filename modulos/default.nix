@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./entornoDeDesarrollo
     ./anfistema
     ./mestizo256nix
     ./agenix
@@ -10,5 +9,6 @@
     ./aplicacionesGraficas
     ./servicios
     ./personalizacionDeEscritorio
+    ./aplicacionesDeTerminal
   ];
 }

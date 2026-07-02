@@ -3,5 +3,6 @@
   imports = [
     ./pipewire
     ./playit
+    ./ssh
   ];
 }

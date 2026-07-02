@@ -6,9 +6,10 @@
   ...
 }:
 {
-  options.anfistema.entornoDeDesarrollo.yazi.activar = lib.mkEnableOption "Activa el móduo de Yazi";
+  options.anfistema.aplicacionesDeTerminal.yazi.activar =
+    lib.mkEnableOption "Activa el móduo de Yazi";
 
-  config = lib.mkIf config.anfistema.entornoDeDesarrollo.yazi.activar {
+  config = lib.mkIf config.anfistema.aplicacionesDeTerminal.yazi.activar {
     home-manager.users.${usuario}.programs.yazi = {
       enable = true;
       extraPackages = with pkgs; [

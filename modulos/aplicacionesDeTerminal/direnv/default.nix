@@ -2,15 +2,14 @@
   config,
   lib,
   usuario,
-  pkgs,
   ...
 }:
 {
-  options.anfistema.entornoDeDesarrollo.direnv.activar = lib.mkEnableOption {
+  options.anfistema.aplicacionesDeTerminal.direnv.activar = lib.mkEnableOption {
     description = "Activa el módulo de direnv";
   };
 
-  config = lib.mkIf config.anfistema.entornoDeDesarrollo.direnv.activar {
+  config = lib.mkIf config.anfistema.aplicacionesDeTerminal.direnv.activar {
     home-manager.users.${usuario}.programs.direnv = {
       enable = true;
       nix-direnv.enable = true;
