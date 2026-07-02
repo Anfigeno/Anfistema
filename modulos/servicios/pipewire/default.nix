@@ -4,9 +4,9 @@
   ...
 }:
 {
-  options.anfistema.pipewire.activar = lib.mkEnableOption "Activa el móulo de pipewire";
+  options.anfistema.servicios.pipewire.activar = lib.mkEnableOption "Activa el móulo de pipewire";
 
-  config = lib.mkIf config.anfistema.pipewire.activar {
+  config = lib.mkIf config.anfistema.servicios.pipewire.activar {
     security.rtkit.enable = true;
 
     services.pipewire = {

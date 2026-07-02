@@ -11,7 +11,6 @@
     xdg.activar = true;
     gtkYQt.activar = true;
     # sddm.activar = true;
-    pipewire.activar = true;
     mestizo256nix.activar = true;
     # nautilus.activar = true;
     gestoresDeEscritorio.gnome.activar = true;
@@ -26,6 +25,7 @@
       kdeconnect.activar = true;
       droidcam.activar = true;
     };
+    servicios.pipewire.activar = true;
 
     paquetesHm = with pkgs; [
       brightnessctl
