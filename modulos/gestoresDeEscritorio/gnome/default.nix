@@ -15,6 +15,7 @@
     ./desactivarAutosuspensionYApagadoDePantalla.nix
     ./escritorioRemoto.nix
     ./extensiones.nix
+    ./aplicacionesExtra.nix
   ];
 
   config = lib.mkIf config.anfistema.gestoresDeEscritorio.gnome.activar {
@@ -29,6 +30,11 @@
     environment.gnome.excludePackages = with pkgs; [
       gnome-tour
       gnome-user-docs
+      gnome-weather
+      epiphany
+      gnome-contacts
+      gnome-clocks
+      gnome-maps
     ];
 
     home-manager.users.${usuario} = {

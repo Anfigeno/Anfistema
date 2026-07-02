@@ -5,11 +5,7 @@
   boot.loader.grub.useOSProber = true;
 
   anfistema = {
-    # niri.activar = true;
-    # awww.activar = true;
-    # sddm.activar = true;
     mestizo256nix.activar = true;
-    # nautilus.activar = true;
     gestoresDeEscritorio.gnome.activar = true;
     gestoresDeVisualizacion.gdm.activar = true;
     aplicacionesGraficas = {
@@ -43,14 +39,8 @@
 
     paquetesHm = with pkgs; [
       brightnessctl
-      # legcord
       prismlauncher
-      # amberol
-      # file-roller
-      # vlc
       ffmpeg
-      kdePackages.gwenview
-      # totem
       yt-dlp
 
       zip
