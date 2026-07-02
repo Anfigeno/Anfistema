@@ -7,6 +7,7 @@ let
     overlays = [
       inputs.niri-flake.overlays.niri
       inputs.firefox-addons.overlays.default
+      inputs.nix-vscode-extensions.overlays.default
     ];
   };
   lib = pkgs.lib;

@@ -237,6 +237,26 @@
         "type": "github"
       }
     },
+    "nix-vscode-extensions": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782964943,
+        "narHash": "sha256-iZL5c4X5f7+Jd0KlmPgT0aNxfTMJd7FKnEY5yhG3ZVo=",
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "rev": "921d0e78a34065183f53c3cb136c7eb8540ea12f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1754028485,
@@ -392,6 +412,7 @@
         "mestizo256nix": "mestizo256nix",
         "neovix": "neovix",
         "niri-flake": "niri-flake",
+        "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_4",
         "playit-nixos-module": "playit-nixos-module"
       }

@@ -16,6 +16,7 @@
       steam.activar = true;
       kdeconnect.activar = true;
       droidcam.activar = true;
+      vscode.activar = true;
     };
     servicios = {
       pipewire.activar = true;

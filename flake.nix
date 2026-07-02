@@ -28,6 +28,11 @@
     playit-nixos-module.url = "github:pedorich-n/playit-nixos-module";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
+
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

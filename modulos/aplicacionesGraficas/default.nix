@@ -10,5 +10,6 @@
     ./nautilus
     ./obs
     ./steam
+    ./vscode
   ];
 }
