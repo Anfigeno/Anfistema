@@ -24,92 +24,22 @@
       url = "github:TemaMestizo/Mestizo256Nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     agenix.url = "github:ryantm/agenix";
-
     playit-nixos-module.url = "github:pedorich-n/playit-nixos-module";
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      niri-flake,
-      neovix,
-      mestizo256nix,
-      playit-nixos-module,
-      agenix,
-      ...
-    }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        overlays = [
-          niri-flake.overlays.niri
-          inputs.firefox-addons.overlays.default
-        ];
-      };
-      lib = pkgs.lib;
+    inputs@{ flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
 
-      usuario = "anfitrion";
-      maquinas = [
-        "l470"
-        "h81m"
+      imports = [
+        ./nix/variables.nix
+        ./nix/pkgs.nix
+        ./nix/configuracionesDeNixos.nix
+        ./nix/shellDeDesarrollo.nix
       ];
-      perfiles = [
-        "defecto"
-        "productividad"
-        "procrastinacion"
-      ];
-
-      modulosHM = [
-        niri-flake.homeModules.niri
-        neovix.moduloHM
-        mestizo256nix.moduloHM
-      ];
-
-      util = import ./util.nix { inherit pkgs lib; };
-    in
-    {
-      nixosConfigurations =
-        maquinas
-        |> lib.map (maquina: {
-          name = maquina;
-          value = nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              inherit
-                system
-                inputs
-                usuario
-                maquina
-                perfiles
-                util
-                ;
-            };
-            modules = [
-              { nixpkgs.pkgs = pkgs; }
-              playit-nixos-module.nixosModules.default
-              home-manager.nixosModules.home-manager
-              agenix.nixosModules.default
-              {
-                home-manager.sharedModules = modulosHM;
-              }
-              ./modulos
-              ./maquinas/configuracionPorDefecto.nix
-            ];
-          };
-        })
-        |> lib.listToAttrs;
-
-      devShells.${system}.default = pkgs.mkShell {
-        packages = with pkgs; [
-          nil
-          nixd
-          nixfmt
-        ];
-      };
     };
 }
