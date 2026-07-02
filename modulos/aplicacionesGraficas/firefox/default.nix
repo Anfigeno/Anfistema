@@ -9,11 +9,11 @@
 {
   imports = [ ./integraciones ];
 
-  options.anfistema.firefox.activar = lib.mkEnableOption {
+  options.anfistema.aplicacionesGraficas.firefox.activar = lib.mkEnableOption {
     description = "Activa el módulo de Firefox";
   };
 
-  config = lib.mkIf config.anfistema.firefox.activar {
+  config = lib.mkIf config.anfistema.aplicacionesGraficas.firefox.activar {
     home-manager.users.${usuario}.programs.firefox = {
       enable = true;
       package = (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) { });

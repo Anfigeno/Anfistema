@@ -5,9 +5,10 @@
   ...
 }:
 {
-  options.anfistema.kdenlive.activar = lib.mkEnableOption "Activa el módulo de KDEnlive";
+  options.anfistema.aplicacionesGraficas.kdenlive.activar =
+    lib.mkEnableOption "Activa el módulo de KDEnlive";
 
-  config = lib.mkIf config.anfistema.kdenlive.activar {
+  config = lib.mkIf config.anfistema.aplicacionesGraficas.kdenlive.activar {
     anfistema.paquetesHm =
       let
         kdenliveEnvuelto = pkgs.kdePackages.kdenlive.overrideAttrs (prevAttrs: {

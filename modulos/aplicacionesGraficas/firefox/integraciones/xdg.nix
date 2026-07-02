@@ -1,12 +1,11 @@
 {
   config,
   usuario,
-  perfiles,
   lib,
   ...
 }:
 {
-  config = lib.mkIf config.anfistema.firefox.activar {
+  config = lib.mkIf config.anfistema.aplicacionesGraficas.firefox.activar {
     home-manager.users.${usuario} =
       { config, ... }:
       {

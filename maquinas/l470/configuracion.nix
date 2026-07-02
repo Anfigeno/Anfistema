@@ -6,24 +6,26 @@
 
   anfistema = {
     entornoDeDesarrollo.activar = true;
-    kitty.activar = true;
     # niri.activar = true;
     # awww.activar = true;
     xdg.activar = true;
-    firefox.activar = true;
     gtkYQt.activar = true;
     # sddm.activar = true;
     pipewire.activar = true;
-    droidcam.activar = true;
     mestizo256nix.activar = true;
-    discord.activar = true;
-    obs.activar = true;
-    steam.activar = true;
-    kdeconnect.activar = true;
     # nautilus.activar = true;
-    kdenlive.activar = true;
     gestoresDeEscritorio.gnome.activar = true;
     gestoresDeVisualizacion.gdm.activar = true;
+    aplicacionesGraficas = {
+      kitty.activar = true;
+      firefox.activar = true;
+      kdenlive.activar = true;
+      discord.activar = true;
+      obs.activar = true;
+      steam.activar = true;
+      kdeconnect.activar = true;
+      droidcam.activar = true;
+    };
 
     paquetesHm = with pkgs; [
       brightnessctl

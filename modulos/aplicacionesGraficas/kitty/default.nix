@@ -6,11 +6,11 @@
   ...
 }:
 {
-  options.anfistema.kitty.activar = lib.mkEnableOption {
+  options.anfistema.aplicacionesGraficas.kitty.activar = lib.mkEnableOption {
     description = "Activa el módulo de kitty";
   };
 
-  config = lib.mkIf config.anfistema.kitty.activar {
+  config = lib.mkIf config.anfistema.aplicacionesGraficas.kitty.activar {
     home-manager.users.${usuario} = {
       programs.kitty = {
         enable = true;
