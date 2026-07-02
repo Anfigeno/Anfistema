@@ -5,11 +5,11 @@
   ...
 }:
 {
-  options.anfistema.awww.activar = lib.mkEnableOption {
+  options.anfistema.personalizacionDeEscritorio.awww.activar = lib.mkEnableOption {
     description = "Activa el módulo de awww";
   };
 
-  config = lib.mkIf config.anfistema.awww.activar {
+  config = lib.mkIf config.anfistema.personalizacionDeEscritorio.awww.activar {
     home-manager.users.${usuario}.services.awww.enable = true;
   };
 }

@@ -6,9 +6,10 @@
   ...
 }:
 {
-  options.anfistema.fontconfig.activar = lib.mkEnableOption "Activa el módulo de fontconfig";
+  options.anfistema.personalizacionDeEscritorio.fontconfig.activar =
+    lib.mkEnableOption "Activa el módulo de fontconfig";
 
-  config = lib.mkIf config.anfistema.fontconfig.activar {
+  config = lib.mkIf config.anfistema.personalizacionDeEscritorio.fontconfig.activar {
     home-manager.users.${usuario} = {
       home.packages = with pkgs; [
         iosevka

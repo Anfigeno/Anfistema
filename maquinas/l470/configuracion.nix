@@ -8,8 +8,6 @@
     entornoDeDesarrollo.activar = true;
     # niri.activar = true;
     # awww.activar = true;
-    xdg.activar = true;
-    gtkYQt.activar = true;
     # sddm.activar = true;
     mestizo256nix.activar = true;
     # nautilus.activar = true;
@@ -26,6 +24,11 @@
       droidcam.activar = true;
     };
     servicios.pipewire.activar = true;
+    personalizacionDeEscritorio = {
+      gtkYQt.activar = true;
+      fontconfig.activar = true;
+      xdg.activar = true;
+    };
 
     paquetesHm = with pkgs; [
       brightnessctl

@@ -5,11 +5,11 @@
   ...
 }:
 {
-  options.anfistema.xdg.activar = lib.mkEnableOption {
+  options.anfistema.personalizacionDeEscritorio.xdg.activar = lib.mkEnableOption {
     description = "Activa el módulo de XDG";
   };
 
-  config = lib.mkIf config.anfistema.xdg.activar {
+  config = lib.mkIf config.anfistema.personalizacionDeEscritorio.xdg.activar {
     home-manager.users.${usuario}.xdg = {
       enable = true;
 

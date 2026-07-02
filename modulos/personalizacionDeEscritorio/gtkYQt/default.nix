@@ -6,11 +6,11 @@
   ...
 }:
 {
-  options.anfistema.gtkYQt.activar = lib.mkEnableOption {
+  options.anfistema.personalizacionDeEscritorio.gtkYQt.activar = lib.mkEnableOption {
     description = "Activa el módulo de GTK y Qt";
   };
 
-  config = lib.mkIf config.anfistema.gtkYQt.activar {
+  config = lib.mkIf config.anfistema.personalizacionDeEscritorio.gtkYQt.activar {
     home-manager.users.${usuario} = {
 
       dconf.enable = true;
