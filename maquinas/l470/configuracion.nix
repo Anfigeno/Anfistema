@@ -5,7 +5,6 @@
   boot.loader.grub.useOSProber = true;
 
   anfistema = {
-    mestizo256nix.activar = true;
     gestoresDeEscritorio.gnome.activar = true;
     gestoresDeVisualizacion.gdm.activar = true;
     aplicacionesGraficas = {
@@ -36,6 +35,7 @@
       yazi.activar = true;
       zellij.activar = true;
     };
+    nix.mestizo256nix.activar = true;
 
     paquetesHm = with pkgs; [
       brightnessctl
